@@ -1,0 +1,22 @@
+{
+
+  "description": "Upgrades your Deezer account to premium",
+  "manifest_version": 2,
+  "name": "Deezium",
+  "version": "2.0",
+  "homepage_url": "https://github.com/lakiluki1",
+  "permissions": [
+    "webRequest", "webRequestBlocking", "https://e-cdns-files.dzcdn.net/cache/js/*", "https://www.deezer.com/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js", "aes.js"]
+  },
+
+  "applications": {
+    "gecko": {
+      "strict_min_version": "57.0a1"
+    }
+  }
+
+}
