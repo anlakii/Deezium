@@ -4,7 +4,7 @@ function logListen(details) {
   let encoder = new TextEncoder();
 
   filter.ondata = event => {
-    let str = decoder.decode(event.data, { stream: true });
+    let str = decoder.decode(event.data, { stream: false });
     let json = JSON.parse(str);
 
     json.results = false;
@@ -21,7 +21,7 @@ function userData(details) {
   let encoder = new TextEncoder();
 
   filter.ondata = event => {
-    let str = decoder.decode(event.data, { stream: true });
+    let str = decoder.decode(event.data, { stream: false });
     let json = JSON.parse(str);
     let key = [102, 228, 95, 242, 215, 50, 122, 26, 57, 216, 206, 38, 164, 237, 200, 85];
 
